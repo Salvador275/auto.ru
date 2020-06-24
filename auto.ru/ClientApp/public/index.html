@@ -23,19 +23,31 @@
     <title>auto.ru</title>
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <div class="svg-sprites" style="position:absolute;top:-9999px;left:-9999px">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                  <symbol viewBox="0 0 24 24" id="search-small"><path fill="currentColor" d="M15.437 14.063h-.726l-.253-.25a5.918 5.918 0 001.435-3.867 5.946 5.946 0 10-5.947 5.947 5.919 5.919 0 003.865-1.433l.253.25v.725l4.572 4.566L20 18.637l-4.563-4.574zm-5.49 0a4.116 4.116 0 110-8.233 4.117 4.117 0 010 8.233z" fill-rule="evenodd"></path></symbol>
+                  <symbol fill="none" viewBox="0 0 25 18" id="youtube_icon"><path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M21.569.529a3.063 3.063 0 012.133 2.176c.518 1.932.498 5.958.498 5.958s0 4.006-.498 5.938a3.063 3.063 0 01-2.133 2.176c-1.894.509-9.469.509-9.469.509s-7.555 0-9.469-.529a3.063 3.063 0 01-2.133-2.176C0 12.67 0 8.643 0 8.643s0-4.006.498-5.938C.778 1.647 1.615.793 2.631.508 4.525 0 12.1 0 12.1 0s7.575 0 9.469.529zm-4.283 8.114l-8.643 5.185V3.457l8.643 5.186z"></path></symbol>
+                  <symbol fill="none" viewBox="0 0 24 24" id="help-filled"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 20a8 8 0 100-16 8 8 0 000 16z" fill="currentColor" fill-opacity=".2"></path><path d="M10.5 15v2h2v-2h-2zm-2-4.3h1.8l.1-.6.2-.6c.2-.1.3-.3.5-.3l.6-.2c.3 0 .6.1.8.3.2.2.3.5.3.9 0 .2 0 .4-.2.6l-.3.4-.5.4a3.1 3.1 0 00-.9 1.1l-.2 1v.5h1.7v-.5l.3-.6.5-.5.5-.4a2.6 2.6 0 001-1.2l.1-1c0-.2 0-.5-.2-.8 0-.3-.2-.6-.5-.8a3 3 0 00-1-.6 4 4 0 00-1.5-.3c-.5 0-1 0-1.3.2a2.9 2.9 0 00-1.7 1.7l-.2 1.3z" fill="#fff"></path></symbol>
+                  <symbol viewBox="0 0 24 24" id="reload"><path d="M12 3a9 9 0 019 9h3l-3.89 3.89-.07.14L16 12h3c0-3.87-3.13-7-7-7V3zm0 18a9 9 0 01-9-9H0l3.89-3.89.07-.14L8 12H5c0 3.87 3.13 7 7 7 1.93 0 3.679-.79 4.94-2.06l1.42 1.42A8.954 8.954 0 0112 21zm0-16c-1.93 0-3.679.79-4.94 2.06L5.64 5.64A8.954 8.954 0 0112 3v2z" fill="currentColor" fill-rule="evenodd"></path></symbol>
+                  <symbol fill="currentColor" viewBox="0 0 21 24" id="keychain"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.3 9.4c-1.7-1.7-1.7-4.3 0-6 1.7-1.7 4.3-1.7 6 0 1.3 1.3 1.6 3.2.8 4.8l-2.6-2.6c-.6-.599-1.3-1-2-1.3a2.235 2.235 0 00-.8 3.701c.5.5.8 1.199.8 2 0 1.699-1.3 3-3 3-.9 0-1.8-.401-2.3-1.101-2-2.2-2.6-5.3-1.7-8.1H2c-1.1 0-2 .9-2 2v5.201C0 12.6.6 14.1 1.8 15.2l8.2 8.2c.8.8 2 .8 2.8 0l6.9-6.899c.8-.801.8-2 0-2.801l-4.2-4.199a6.226 6.226 0 00-.9-7.701c-2.4-2.4-6.4-2.4-8.8 0-2.4 2.4-2.4 6.4 0 8.8l1.5-1.2z" fill="#fff"></path><g mask="url(#keychain_a)"><path d="M-3 0h24v24H-3z"></path></g></symbol>
+                  <symbol viewBox="0 0 24 24" id="vas-special-small"><path d="M19 7v8H5V7c0-2 1-4 4-4h6c3 0 4 2 4 4zM4 20v-3h16v3H4z" fill="currentColor" fill-rule="evenodd"></path></symbol>
+                  <symbol viewBox="0 0 24 24" id="price-down-big"><path d="M14 13h6l-8.032 7.936L4 13h6V4h4v9z" fill="currentColor" fill-rule="evenodd"></path></symbol>
+                  <mask id="keychain_a" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="24"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.3 9.4c-1.7-1.7-1.7-4.3 0-6 1.7-1.7 4.3-1.7 6 0 1.3 1.3 1.6 3.2.8 4.8l-2.6-2.6c-.6-.599-1.3-1-2-1.3a2.235 2.235 0 00-.8 3.701c.5.5.8 1.199.8 2 0 1.699-1.3 3-3 3-.9 0-1.8-.401-2.3-1.101-2-2.2-2.6-5.3-1.7-8.1H2c-1.1 0-2 .9-2 2v5.201C0 12.6.6 14.1 1.8 15.2l8.2 8.2c.8.8 2 .8 2.8 0l6.9-6.899c.8-.801.8-2 0-2.801l-4.2-4.199a6.226 6.226 0 00-.9-7.701c-2.4-2.4-6.4-2.4-8.8 0-2.4 2.4-2.4 6.4 0 8.8l1.5-1.2z" fill="#fff"></path></mask>
+              </defs>
+          </svg>
+      </div>
+      <noscript>
+          You need to enable JavaScript to run this app.
+      </noscript>
+      <div id="root"></div>
+      <div class="footer-container">
+          <div class="container">
+              <footer>
+                  <hr />
+                  <p>&copy; @DateTime.Now.Year - мое приложение ASP.NET & REACT</p>
+              </footer>
+          </div>
+      </div>
   </body>
 </html>
